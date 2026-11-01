@@ -15,6 +15,8 @@ của repo đó; khi hai bên khác nhau, file của repo thắng.
 - **Văn phong:** theo [Google developer documentation style guide](https://developers.google.com/style): câu ngắn, chủ động, thuật ngữ nhất quán.
 - **Timeless:** tài liệu và code hiện trạng nói thứ đó là gì và làm gì. Không ngày đổi, không nhãn tiến độ. Lịch sử chỉ nằm ở ADR,
   CHANGELOG theo [Keep a Changelog](https://keepachangelog.com), postmortem và mô tả PR. Mốc "tính đến" có nguồn cho dữ kiện bên ngoài thì được.
+- **Một nguồn sự thật:** không ghi cứng số lượng, danh sách hay version mà code hoặc file khác đã giữ; trỏ tới nguồn đó (ví dụ "mọi repo trong
+  danh sách của `repositories.tf`" thay vì "sáu repo"), để thêm hay bớt một mục không làm tài liệu sai.
 
 ## 3. ADR
 
