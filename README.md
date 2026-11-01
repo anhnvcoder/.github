@@ -10,11 +10,3 @@ của account `anhnvcoder`: GitHub dùng chúng cho mọi repo của account ch�
 - [`.github/pull_request_template.md`](.github/pull_request_template.md): mẫu mô tả PR.
 
 Luật làm việc riêng của mỗi repo (lệnh kiểm, an toàn cloud và database) ở `AGENTS.md` của repo đó.
-
-## Repo của lab short-video-platform
-
-- [`svp-backend`](https://github.com/anhnvcoder/svp-backend): service Go, `proto/`, compose, Helm chart, CI, tài liệu kiến trúc và ADR.
-- [`svp-frontend`](https://github.com/anhnvcoder/svp-frontend): web Next.js và BFF.
-- [`svp-gitops`](https://github.com/anhnvcoder/svp-gitops): môi trường nào chạy bản nào (Argo CD, `envs/stg`, `envs/prd`).
-- [`svp-infra`](https://github.com/anhnvcoder/svp-infra): Terraform của cloud cho stg và prd.
-- [`svp-labs`](https://github.com/anhnvcoder/svp-labs): bản tự làm để hiểu bên trong, dựng một lần và so với bản chuẩn.

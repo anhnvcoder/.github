@@ -10,4 +10,4 @@ dùng giá trị giả hoặc che đi.
 
 ## Phạm vi
 
-Đây là lab học, không phải sản phẩm có người dùng thật. Không có cam kết thời gian phản hồi hay thời gian vá.
+Repo cá nhân, không có đội trực: không cam kết thời gian phản hồi hay thời gian vá. Repo nào có chính sách khác thì đặt `SECURITY.md` riêng.

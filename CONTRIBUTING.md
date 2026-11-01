@@ -5,8 +5,8 @@ của repo đó; khi hai bên khác nhau, file của repo thắng.
 
 ## 1. Ngôn ngữ
 
-- File `.md` viết tiếng Việt.
-- Mọi thứ trong code viết tiếng Anh: comment, log, tên test, error message, `description` của biến, file cấu hình, `*.example`.
+- Mọi thứ trong code viết tiếng Anh (thông lệ chung để code đọc được với mọi người): comment, log, tên test, error message, `description` của biến, file cấu hình, `*.example`.
+- Ngôn ngữ của tài liệu (`.md`) do mỗi repo chọn, ghi trong `AGENTS.md` hay `README.md` của repo đó.
 
 ## 2. Tài liệu
 
