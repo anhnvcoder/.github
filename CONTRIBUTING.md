@@ -40,6 +40,9 @@ Comment tự đủ nghĩa: nói lý do ngay tại chỗ. Không nhắc ADR, nhã
 
 - Commit theo [Conventional Commits](https://www.conventionalcommits.org); mô tả viết tiếng Việt.
 - Mọi thay đổi vào `main` đi qua PR có check bắt buộc xanh, squash merge. Không force push; hoàn tác bằng PR revert.
+- **Tiêu đề PR theo Conventional Commits**, vì commit squash lấy tiêu đề và mô tả của PR: tiêu đề PR chính là thông điệp commit trên `main`.
+- **Lịch sử `main` tuyến tính:** mỗi commit là một PR, nên hoàn tác một thay đổi là revert đúng một commit. PR revert giữ tiêu đề
+  `Revert "…"` do GitHub đặt, không viết lại theo Conventional Commits.
 
 ## 6. Repo public
 
