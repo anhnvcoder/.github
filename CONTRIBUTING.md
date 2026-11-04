@@ -61,6 +61,7 @@ file `*.example` và file gitignore.
 | Cấu trúc tài liệu | [Diátaxis](https://diataxis.fr) |
 | Cửa vào | [standard-readme](https://github.com/RichardLitt/standard-readme) |
 | Văn phong | [Google developer documentation style guide](https://developers.google.com/style) |
+| Kiểm tài liệu | [Docs as code](https://www.writethedocs.org/guide/docs-as-code/): [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2), [lychee](https://lychee.cli.rs), `make docs-check` ở mỗi repo |
 | Lịch sử thay đổi | [Keep a Changelog](https://keepachangelog.com) |
 | Quyết định kiến trúc | [MADR 4](https://adr.github.io/madr/) |
 | Commit | [Conventional Commits](https://www.conventionalcommits.org) |

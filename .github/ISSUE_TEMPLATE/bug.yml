@@ -1,0 +1,50 @@
+# Issue form (https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms),
+# the default of every repository of the account that has no issue template of its own.
+name: Báo lỗi
+description: Hành vi sai hay lỗi của một repo.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Lỗ hổng bảo mật không báo ở đây: báo riêng qua tab **Security** của repo có lỗ hổng, chọn **Report a vulnerability**.
+        Không dán secret thật (token, khoá, mật khẩu, account ID): dùng giá trị giả hoặc che đi.
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả
+      description: Lỗi là gì, xảy ra ở đâu.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Cách tái hiện
+      description: Các bước hay lệnh để thấy lỗi, kèm output.
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Mong đợi
+      description: Lẽ ra phải xảy ra gì.
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: Tên repo có lỗi.
+      placeholder: svp-backend
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version hay commit
+      description: Tag, version của image hay SHA của commit đang chạy.
+    validations:
+      required: true
