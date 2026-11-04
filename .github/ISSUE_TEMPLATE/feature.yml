@@ -1,0 +1,20 @@
+# Issue form (https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms),
+# the default of every repository of the account that has no issue template of its own.
+name: Đề xuất tính năng
+description: Vấn đề cần giải và cách đề xuất.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vấn đề
+      description: Việc gì đang khó hay chưa làm được, với ai.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Đề xuất
+      description: Cách giải đề xuất, và phương án khác đã cân nhắc nếu có.
+    validations:
+      required: true

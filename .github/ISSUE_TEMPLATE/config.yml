@@ -1,0 +1,9 @@
+# Template chooser (https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser),
+# the default of every repository of the account that has no issue template of its own. A link here cannot name the
+# repository the issue is opened in, so it points at the security policy, which sends a report to the Security tab of
+# the repository concerned.
+blank_issues_enabled: false
+contact_links:
+  - name: Báo lỗ hổng bảo mật
+    url: https://github.com/anhnvcoder/.github/security/policy
+    about: Báo riêng qua tab Security của repo có lỗ hổng (Report a vulnerability), không mở issue công khai.

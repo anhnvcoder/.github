@@ -1,0 +1,8 @@
+# Files markdownlint-cli2 leaves out (the rules are in .markdownlint.yaml); lychee still checks their links.
+ignores:
+  # Contributor Covenant 2.1 kept word for word as published, trailing blank lines included, so it can be compared
+  # with the source: its style is the upstream one, not this repository's.
+  - CODE_OF_CONDUCT.md
+  # The body of a pull request, shown under the pull request's title: it starts at "##" on purpose (MD041), and a
+  # markdownlint comment inside it would end up in every description and squash commit message.
+  - .github/pull_request_template.md
