@@ -32,9 +32,10 @@ Comment tự đủ nghĩa: nói lý do ngay tại chỗ. Không nhắc ADR, nhã
 
 - **Nói vì sao, không kể lại code:** giải thích lý do (*why*), không kể lại hay diễn giải điều code đã tự thể hiện (*what*), không liệt kê bước hay giải thích cú pháp theo [Go Doc Comments](https://go.dev/doc/comment) và [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html#comments) (mục Comments).
 - **Chỉ đặt ở chỗ code không tự nói:** chỉ viết comment ở nơi đọc code không tự hiểu được như luật bảo mật ([GitHub Actions security hardening](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)), lỗi hoặc giới hạn của nền tảng và công cụ, ràng buộc lạ, guard bắt buộc phải giữ, hoặc ngoại lệ có chủ đích.
-- **Giới hạn độ dài (của dự án):** áp cho comment của shell, YAML, Makefile và Rego: mỗi khối comment liền nhau tối đa 4 dòng (riêng khối đầu file của workflow và action dưới `.github/` tối đa 8 dòng), mỗi dòng tối đa 120 ký tự. Doc comment của Go theo [Go Doc Comments](https://go.dev/doc/comment) (doc của package, kiểu, hàm được nhiều đoạn) và không chịu giới hạn này.
-- **Giải thích dài vào tài liệu:** lý do thiết kế dài (so sánh phương án, bối cảnh lịch sử, kiến trúc luồng) thuộc loại tài liệu explanation theo [Diátaxis](https://diataxis.fr) trong file `.md` của repo; comment trong code chỉ giữ tối đa một dòng trỏ tới file đó (dạng `# Design notes: <đường dẫn từ gốc repo>.`).
-- **Chỉ dẫn công cụ không đổi:** comment chỉ dẫn cho công cụ (directive như `# shellcheck`, `# renovate:`, `# zizmor:`) và comment tag phiên bản sau `uses: ...@<sha>` giữ nguyên đúng cú pháp theo chuẩn của từng công cụ như [ShellCheck](https://www.shellcheck.net) và [Renovate](https://docs.renovatebot.com).
+- **Giới hạn độ dài (của dự án):** áp cho comment thường ở mọi ngôn ngữ: mỗi khối comment liền nhau tối đa 4 dòng (riêng khối đầu file của workflow và action dưới `.github/` tối đa 8 dòng), mỗi dòng tối đa 120 ký tự.
+- **Doc comment theo chuẩn của ngôn ngữ:** không chịu giới hạn trên. Go theo [Go Doc Comments](https://go.dev/doc/comment) (doc của package, kiểu, hàm được nhiều đoạn), TypeScript theo [TSDoc](https://tsdoc.org) (`/** */`), proto theo comment của phần tử trong [Protocol Buffers style guide](https://protobuf.dev/programming-guides/style/), Helm theo khối `# --` của [helm-docs](https://github.com/norwoodj/helm-docs). Mô tả biến và output của Terraform nằm ở `description` (dữ liệu mà [terraform-docs](https://terraform-docs.io) đọc), không ở comment. Doc comment là hợp đồng của API: không chứa lịch sử, so sánh phương án hay quy trình ngoài file.
+- **Giải thích dài vào tài liệu:** lý do thiết kế dài (so sánh phương án, bối cảnh lịch sử, kiến trúc luồng) thuộc loại tài liệu explanation theo [Diátaxis](https://diataxis.fr) trong file `.md` của repo; comment trong code chỉ giữ tối đa một dòng trỏ tới file đó, viết bằng cú pháp comment của file (`# Design notes: <đường dẫn từ gốc repo>.`, `// Design notes: <đường dẫn từ gốc repo>.`).
+- **Chỉ dẫn công cụ không đổi:** comment chỉ dẫn cho công cụ (directive như `# shellcheck`, `# renovate:`, `# zizmor:`, `//go:embed`, `//nolint:<linter> // <lý do>`, `// eslint-disable-next-line`, `// @ts-expect-error`, `#trivy:ignore`, `-- name:` của sqlc) và comment tag phiên bản sau `uses: ...@<sha>` giữ nguyên đúng cú pháp theo chuẩn của từng công cụ như [ShellCheck](https://www.shellcheck.net) và [Renovate](https://docs.renovatebot.com).
 
 Chuẩn theo ngôn ngữ:
 
@@ -43,6 +44,7 @@ Chuẩn theo ngôn ngữ:
 | Go | [Go Doc Comments](https://go.dev/doc/comment), [Effective Go](https://go.dev/doc/effective_go), [Google Go Style Guide](https://google.github.io/styleguide/go) |
 | Shell | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) và [ShellCheck](https://www.shellcheck.net); script dài thì viết bằng Go |
 | TypeScript | [TSDoc](https://tsdoc.org) |
+| Protobuf | [Protocol Buffers style guide](https://protobuf.dev/programming-guides/style/) |
 | Terraform | [HashiCorp Terraform style guide](https://developer.hashicorp.com/terraform/language/style) và [terraform-docs](https://terraform-docs.io) |
 | Helm | [Helm chart best practices](https://helm.sh/docs/chart_best_practices/) và [helm-docs](https://github.com/norwoodj/helm-docs) |
 
