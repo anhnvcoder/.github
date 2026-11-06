@@ -30,6 +30,14 @@ của repo đó; khi hai bên khác nhau, file của repo thắng.
 
 Comment tự đủ nghĩa: nói lý do ngay tại chỗ. Không nhắc ADR, nhãn tiến độ hay ticket, vì số mục đổi hay ADR bị thay thì tham chiếu thành sai.
 
+- **Nói vì sao, không kể lại code:** giải thích lý do (*why*), không kể lại hay diễn giải điều code đã tự thể hiện (*what*), không liệt kê bước hay giải thích cú pháp theo [Go Doc Comments](https://go.dev/doc/comment) và [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html#comments) (mục Comments).
+- **Chỉ đặt ở chỗ code không tự nói:** chỉ viết comment ở nơi đọc code không tự hiểu được như luật bảo mật ([GitHub Actions security hardening](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)), lỗi hoặc giới hạn của nền tảng và công cụ, ràng buộc lạ, guard bắt buộc phải giữ, hoặc ngoại lệ có chủ đích.
+- **Giới hạn độ dài (của dự án):** áp cho comment của shell, YAML, Makefile và Rego: mỗi khối comment liền nhau tối đa 4 dòng (riêng khối đầu file của workflow và action dưới `.github/` tối đa 8 dòng), mỗi dòng tối đa 120 ký tự. Doc comment của Go theo [Go Doc Comments](https://go.dev/doc/comment) (doc của package, kiểu, hàm được nhiều đoạn) và không chịu giới hạn này.
+- **Giải thích dài vào tài liệu:** lý do thiết kế dài (so sánh phương án, bối cảnh lịch sử, kiến trúc luồng) thuộc loại tài liệu explanation theo [Diátaxis](https://diataxis.fr) trong file `.md` của repo; comment trong code chỉ giữ tối đa một dòng trỏ tới file đó (dạng `# Design notes: <đường dẫn từ gốc repo>.`).
+- **Chỉ dẫn công cụ không đổi:** comment chỉ dẫn cho công cụ (directive như `# shellcheck`, `# renovate:`, `# zizmor:`) và comment tag phiên bản sau `uses: ...@<sha>` giữ nguyên đúng cú pháp theo chuẩn của từng công cụ như [ShellCheck](https://www.shellcheck.net) và [Renovate](https://docs.renovatebot.com).
+
+Chuẩn theo ngôn ngữ:
+
 | Ngôn ngữ | Chuẩn |
 | --- | --- |
 | Go | [Go Doc Comments](https://go.dev/doc/comment), [Effective Go](https://go.dev/doc/effective_go), [Google Go Style Guide](https://google.github.io/styleguide/go) |
