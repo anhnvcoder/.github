@@ -1,5 +1,12 @@
 # .github
 
+> **Tóm tắt**
+>
+> - **Trả lời:** repo này giữ file nào, và GitHub áp chúng cho repo nào của account `anhnvcoder`.
+> - **Vì sao:** quy ước chung nằm một chỗ; repo nào chưa có file cùng tên nhận bản ở đây, repo có file riêng thì file riêng thắng.
+> - **Làm gì:** đổi file ở đây thì mở PR và chờ check `docs` xanh (`make docs-check` trên máy); sau khi vào `main`, mọi repo nhận bản mới.
+> - **Đọc tiếp:** [`CONTRIBUTING.md`](CONTRIBUTING.md): quy ước chung của mọi repo.
+
 Repo giữ [default community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
 của account `anhnvcoder`: quy ước chung, chính sách bảo mật, quy tắc ứng xử, mẫu PR và mẫu issue cho mọi repo của account.
 
